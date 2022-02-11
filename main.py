@@ -36,7 +36,7 @@ def main():
             print("I choose Rock, You Win")
 
     elif select == scisors:
-        print("You choose Rock")
+        print("You choose Scisors")
         time.sleep(1)
         if rpc == scisors:
             print("I choose Scisors too, It's draw let's battle again!")
