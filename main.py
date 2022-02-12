@@ -53,6 +53,7 @@ def main():
 
     else:
         print("Invaild Option!")
+        time.sleep(2)
         main()
 
 main()
