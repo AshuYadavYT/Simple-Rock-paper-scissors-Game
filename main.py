@@ -1,10 +1,10 @@
-import time
-import random
+# A Simple RPC Game Made in Python
+import time, random
 
 rock = "r"
 paper = "p"
-scisors = "s"
-rpc_all = [rock, paper, scisors]
+scissors = "s"
+rpc_all = [rock, paper, scissors]
 
 def main():
     print("Welcome to Rock, Paper and Scizors game")
@@ -14,8 +14,8 @@ def main():
     if select == rock:
         print("You choose Rock")
         time.sleep(1)
-        if rpc == scisors:
-            print("I choose Scisors, You Win!")
+        if rpc == scissors:
+            print("I choose Scissors, You Win!")
         elif rpc == paper:
             print("I choose Paper, I Win")
         elif rpc == rock:
@@ -26,8 +26,8 @@ def main():
     elif select == paper:
         print("You choose Paper")
         time.sleep(1)
-        if rpc == scisors:
-            print("I choose Scisors, You Lost")
+        if rpc == scissors:
+            print("I choose Scissors, You Lost")
         elif rpc == paper:
             print("I choose Paper too, It's draw let's battle again!")
             time.sleep(2)
@@ -35,11 +35,11 @@ def main():
         elif rpc == rock:
             print("I choose Rock, You Win")
 
-    elif select == scisors:
-        print("You choose Scisors")
+    elif select == scissors:
+        print("You choose Scissors")
         time.sleep(1)
-        if rpc == scisors:
-            print("I choose Scisors too, It's draw let's battle again!")
+        if rpc == scissors:
+            print("I choose Scissors too, It's draw let's battle again!")
             time.sleep(2)
             main()
         elif rpc == rock:
@@ -47,9 +47,9 @@ def main():
         elif rpc == paper:
             print("I choose Paper, You Win")
 
-    elif select == "exit".lower():
+    elif select == "exit": #for Stopping Game
         print("Game Stopped!")
-        exit()
+        exit() 
 
     else:
         print("Invaild Option!")
