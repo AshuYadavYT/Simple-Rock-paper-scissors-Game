@@ -6,34 +6,44 @@ paper = "p"
 scissors = "s"
 rpc_all = [rock, paper, scissors]
 
+emo_rock = "🗻"
+emo_paper = "📃"
+emo_scissors = "✂"
+emo_win = "🎊"
+
 def main():
-    print("Welcome to Rock, Paper and Scizors game")
+    print("Welcome to Rock, Paper and Scissors game")
+    time.sleep(2)
     select = input("Select your option: ")
     rpc = random.choice(rpc_all)
+    
+    if select == ".exit": #for Stopping Game
+        print("👍| Game Stopped!")
+        exit() 
 
-    if select == rock:
-        print("You choose Rock")
+    elif select == rock:
+        print(f"You choose Rock {emo_rock}")
         time.sleep(1)
         if rpc == scissors:
-            print("I choose Scissors, You Win!")
+            print(f"I choose Scissors {emo_scissors} , You Win! {emo_win}")
         elif rpc == paper:
-            print("I choose Paper, I Win")
+            print(f"I choose Paper {emo_paper}, You Lost!")
         elif rpc == rock:
-            print("I choose Rock too, It's draw let's battle again!")
+            print("I choose Rock too, It's draw let's battle again!✨")
             time.sleep(2)
             main()
 
     elif select == paper:
-        print("You choose Paper")
+        print(f"You choose Paper {emo_paper}")
         time.sleep(1)
         if rpc == scissors:
-            print("I choose Scissors, You Lost")
+            print(f"I choose Scissors {emo_scissors} , You Lost")
         elif rpc == paper:
-            print("I choose Paper too, It's draw let's battle again!")
+            print(f"I choose Paper too, It's draw let's battle again!")
             time.sleep(2)
             main()
         elif rpc == rock:
-            print("I choose Rock, You Win")
+            print(f"I choose Rock {emo_rock}, You Win {emo_win}")
 
     elif select == scissors:
         print("You choose Scissors")
@@ -43,16 +53,12 @@ def main():
             time.sleep(2)
             main()
         elif rpc == rock:
-            print("I choose Rock, You Lost")
+            print(f"I choose Rock {emo_rock}, You Lost")
         elif rpc == paper:
-            print("I choose Paper, You Win")
-
-    elif select == "exit": #for Stopping Game
-        print("Game Stopped!")
-        exit() 
+            print(f"I choose Paper {emo_paper}, You Win {emo_win}")
 
     else:
-        print("Invaild Option!")
+        print("❌| Invaild Option!")
         time.sleep(2)
         main()
 
