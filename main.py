@@ -1,4 +1,4 @@
-# A Simple RPC Game Made in Python
+# A Simple RPC Game Made in Python ^_^
 import time, random
 
 rock = "r"
